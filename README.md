@@ -24,13 +24,14 @@ The next steps will break this down and make it comprehensible.
 ## Regex Components
 
 ### Anchors
-/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+`/^#`?([a-f0-9]{6}|[a-f0-9]{3})`$/`
+The highlighted portions of the regular expression are the anchors. The back slashes `/` signify the beginning and the end of the expression. The `^` symbol indicates that the string in question must begin with the next symbol in the sequence. In our case the next symbol in the sequence is #. This is significant because hex codes start with a # symbol. There is an anchor at the end of the expression as can be seen by the highlighted portion at the end of the expression. The `$` symbol is used to check if a string fully matches a pattern. This is similar to the `^` symbol, but `$` signifies that the end of the string ends with whatever symbols preceed $. In our case, the end of the string must match the 3-6 character pattern before the $ anchor. Which brings us to the next section.  
 
 ### Quantifiers
+/^#`?`([a-f0-9]`{6}`|[a-f0-9]`{3}`)$/
 
-### Grouping Constructs
-
-### Bracket Expressions
+Quantifiers tell how many characters are expected. Quantifiers specifiy how many instances of a character, group, or character class must be there for a match to be found. By default, quantifiers are "greedy" which means they will match as many characters as possible. If the characters `+ ? {}` are found in an regex, they are considered quantifiers. The `?` tells the expression to match 0 or 1 time. Because there are two different types of ways hex codes can be written, this will help determine what kind they might be. This is indicated by the {6} or {3}. The {6} signifies the hex triple format and the {3} signifies the shorthand hex format. This indicates that the length of the component preceding these quantifiers shoud be 6 or 3. 
+For reference the hex triple format look like #000000 and the shorthand hex format looks like #09C. The shorthand characters would be doubled when put into hex triple ### Bracket Expressions
 
 ### Character Classes
 
