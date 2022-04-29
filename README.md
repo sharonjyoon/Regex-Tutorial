@@ -25,6 +25,7 @@ The next steps will break this down and make it comprehensible.
 
 ### Anchors
 `/^#`?([a-f0-9]{6}|[a-f0-9]{3})`$/`
+
 The highlighted portions of the regular expression are the anchors. The back slashes `/` signify the beginning and the end of the expression. The `^` symbol indicates that the string in question must begin with the next symbol in the sequence. In our case the next symbol in the sequence is #. This is significant because hex codes start with a # symbol. There is an anchor at the end of the expression as can be seen by the highlighted portion at the end of the expression. The `$` symbol is used to check if a string fully matches a pattern. This is similar to the `^` symbol, but `$` signifies that the end of the string ends with whatever symbols preceed $. In our case, the end of the string must match the 3-6 character pattern before the $ anchor. Which brings us to the next section.  
 
 ### Quantifiers
@@ -35,17 +36,27 @@ For reference the hex triple format look like #000000 and the shorthand hex form
 
 ### Grouping Constructs
 /^#?`([a-f0-9]{6}|[a-f0-9]{3})`$/
+
 The highlighted portion is grouped together by the parentheses (). The parentheses represent remembered matches. The grouping treats the characters as a single unit. When a match is remembered you can use $n to refer to it starting with $1-$9 and you can refer to the entire subsection with $&. You can use this feature for find-and-replace operations or any time you need to do something with part of the match. Parentheses are also used to group parts of the expression together into subgroups. 
 
 ### Bracket Expressions
 /^#?(`[a-f0-9]`{6}|`[a-f0-9]`{3})$/
+
 Brackets indicate a set of characters to match. Any character within the brackets will match unless it is negated by the previously mentioned ^ symbol which means that it would make things optional. Bracket expressions also signify the beginning of a character class or quantifier statement. So if you look at our regex closely you can see that the match can be any letter from a-f and any number from 0-9 the first calls for one that is six characters long and the second part in brackets calls for the same but in this case the quantifier indicates that it should be three characters long. 
+
 ### Character Classes
 /^#?(`[a-f0-9]`{6}|`[a-f0-9]`{3})$/
+
 Character classes are the components within the regular expression. They tell us what type of characters to expect. In our case we can see that the character classes are contained within the brackets. There are two sets of character classes in our expression. It would be repetitive to go over the contents again so please see the section on bracket expressions for an explanation on the contents of the character classes. 
+
 ### The OR Operator
+/^#?([a-f0-9]{6}`|`[a-f0-9]{3})$/
+
+The "or" operator within regular expressions is symbolized with the "|" element as seen above. It indicates that it could match either of the components on either side of the "|" element. In the case seen above we see that it can be either the hex triple format or the hex shorthand format that could match. Essentially the character classes ask for the same characters letters a-f or numbers 0-9 but the difference as mentioned before is the length and by using this | symbol we know that it could match either of the two. 
 
 ## Author
 Sharon J. Yoon
 
-Sharon is a software engineer / programmer 
+I am a software engineer /  programmer that is dedicated to the life long pursuit of learning. My goal is to create applications that are intuitive and accessible for all. 
+
+Github: [Sharonjyoon]()
