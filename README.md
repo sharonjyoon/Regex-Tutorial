@@ -59,4 +59,4 @@ Sharon J. Yoon
 
 I am a software engineer /  programmer that is dedicated to the life long pursuit of learning. My goal is to create applications that are intuitive and accessible for all. 
 
-Github: [Sharonjyoon]()
+Github: [Sharonjyoon](https://github.com/sharonjyoon)
