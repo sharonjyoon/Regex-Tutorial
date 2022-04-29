@@ -31,7 +31,13 @@ The highlighted portions of the regular expression are the anchors. The back sla
 /^#`?`([a-f0-9]`{6}`|[a-f0-9]`{3}`)$/
 
 Quantifiers tell how many characters are expected. Quantifiers specifiy how many instances of a character, group, or character class must be there for a match to be found. By default, quantifiers are "greedy" which means they will match as many characters as possible. If the characters `+ ? {}` are found in an regex, they are considered quantifiers. The `?` tells the expression to match 0 or 1 time. Because there are two different types of ways hex codes can be written, this will help determine what kind they might be. This is indicated by the {6} or {3}. The {6} signifies the hex triple format and the {3} signifies the shorthand hex format. This indicates that the length of the component preceding these quantifiers shoud be 6 or 3. 
-For reference the hex triple format look like #000000 and the shorthand hex format looks like #09C. The shorthand characters would be doubled when put into hex triple ### Bracket Expressions
+For reference the hex triple format look like #000000 and the shorthand hex format looks like #09C. The shorthand characters would be doubled when put into hex triple format. 
+
+### Grouping Constructs
+/^#?`([a-f0-9]{6}|[a-f0-9]{3})`$/
+The highlighted portion is grouped together by the parentheses. The grouping treats the characters as a single unit. You can use this feature to extract specific information. If the grouped portion is before the quantifiers then it would mean that you would have to repeat the grouped section as many times as the quantifier tells it to, but in our case this does not happen and the $ symbol is appended at the end to signal that it is the end of the expression. 
+
+### Bracket Expressions
 
 ### Character Classes
 
