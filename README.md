@@ -41,7 +41,8 @@ The highlighted portion is grouped together by the parentheses (). The parenthes
 /^#?(`[a-f0-9]`{6}|`[a-f0-9]`{3})$/
 Brackets indicate a set of characters to match. Any character within the brackets will match unless it is negated by the previously mentioned ^ symbol which means that it would make things optional. Bracket expressions also signify the beginning of a character class or quantifier statement. So if you look at our regex closely you can see that the match can be any letter from a-f and any number from 0-9 the first calls for one that is six characters long and the second part in brackets calls for the same but in this case the quantifier indicates that it should be three characters long. 
 ### Character Classes
-
+/^#?(`[a-f0-9]`{6}|`[a-f0-9]`{3})$/
+Character classes are the components within the regular expression. They tell us what type of characters to expect. In our case we can see that the character classes are contained within the brackets. There are two sets of character classes in our expression. It would be repetitive to go over the contents again so please see the section on bracket expressions for an explanation on the contents of the character classes. 
 ### The OR Operator
 
 ## Author
