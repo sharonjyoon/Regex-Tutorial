@@ -38,14 +38,11 @@ For reference the hex triple format look like #000000 and the shorthand hex form
 The highlighted portion is grouped together by the parentheses (). The parentheses represent remembered matches. The grouping treats the characters as a single unit. When a match is remembered you can use $n to refer to it starting with $1-$9 and you can refer to the entire subsection with $&. You can use this feature for find-and-replace operations or any time you need to do something with part of the match. Parentheses are also used to group parts of the expression together into subgroups. 
 
 ### Bracket Expressions
-
+/^#?(`[a-f0-9]`{6}|`[a-f0-9]`{3})$/
+Brackets indicate a set of characters to match. Any character within the brackets will match unless it is negated by the previously mentioned ^ symbol which means that it would make things optional. Bracket expressions also signify the beginning of a character class or quantifier statement. So if you look at our regex closely you can see that the match can be any letter from a-f and any number from 0-9 the first calls for one that is six characters long and the second part in brackets calls for the same but in this case the quantifier indicates that it should be three characters long. 
 ### Character Classes
 
 ### The OR Operator
-
-### Flags
-
-### Character Escapes
 
 ## Author
 Sharon J. Yoon
