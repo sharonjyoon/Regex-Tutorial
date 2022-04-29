@@ -35,7 +35,7 @@ For reference the hex triple format look like #000000 and the shorthand hex form
 
 ### Grouping Constructs
 /^#?`([a-f0-9]{6}|[a-f0-9]{3})`$/
-The highlighted portion is grouped together by the parentheses. The grouping treats the characters as a single unit. You can use this feature to extract specific information. If the grouped portion is before the quantifiers then it would mean that you would have to repeat the grouped section as many times as the quantifier tells it to, but in our case this does not happen and the $ symbol is appended at the end to signal that it is the end of the expression. 
+The highlighted portion is grouped together by the parentheses (). The parentheses represent remembered matches. The grouping treats the characters as a single unit. When a match is remembered you can use $n to refer to it starting with $1-$9 and you can refer to the entire subsection with $&. You can use this feature for find-and-replace operations or any time you need to do something with part of the match. Parentheses are also used to group parts of the expression together into subgroups. 
 
 ### Bracket Expressions
 
