@@ -1,6 +1,6 @@
 # A Beginner's Guide to Regular Expressions
 
-This tutorial will guide you through the steps on how a regular expression works, the different components that make up a regular expression, and how they will ultimately simplify aspects of a search feature when implemented into your code. Regular expressions originate from a mathematical concept called "regular sets" but for our intents and purposes we can think of them as a sequence of characters that define a search pattern for a text. In a programming, these patterns can be used to match character combinations within strings, so that it is possible to find and replace a character or even a sequence of characters. Regular expressions are also often used to validate/verify user input data.   
+This tutorial will guide you through the steps on how a regular expression works, the different components that make up a regular expression, and how they will ultimately simplify aspects of a search feature when implemented into your code. Regular expressions originate from a mathematical concept called "regular sets" but for our intents and purposes we can think of them as a sequence of characters that define a search pattern for a text. In programming, these patterns can be used to match character combinations within strings, so that it is possible to find and replace a character or even a sequence of characters. Regular expressions are also often used to validate/verify user input data.   
 
 ## Summary
 
